@@ -10,7 +10,7 @@ describe('render(opt)',function () {
 
 
     it('render(null) is render object',function(){
-        var renderObj=render(null);
+        const renderObj=render(null);
         assert(renderObj instanceof render);
     })
 });
@@ -24,7 +24,7 @@ describe('render object function',function(){
     })
 
     it('#readFile()',function () {
-        var file=this.renderObj.readFile('./test/test.hbs');
+        const file=this.renderObj.readFile('./test/test.hbs');
         assert(!!file,'file empty')
     })
     
