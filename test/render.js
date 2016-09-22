@@ -17,7 +17,7 @@ describe('render(opt)',function () {
 
 
 
-describe('render object function',function(){
+describe('renderObject function',function(){
 
     before(function () {
         this.renderObj=render({});
