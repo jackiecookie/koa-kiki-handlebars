@@ -4,7 +4,7 @@
   "description": "handlebars middle for koa2",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "make test"
   },
   "keywords": [
     "koa",
@@ -14,5 +14,12 @@
   "license": "MIT",
   "dependencies": {
     "handlebars": "^4.0.5"
+  },
+  "devDependencies": {
+    "debug": "^2.2.0",
+    "koa": "^1.2.4",
+    "make-lint": "^1.0.1",
+    "mocha": "^3.0.2",
+    "should": "^11.1.0"
   }
 }
