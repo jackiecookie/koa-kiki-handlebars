@@ -23,15 +23,18 @@ describe('renderObject function', function () {
         this.renderObj = render({});
     });
 
-    it('#renderView()', function () {
-
+    it('#renderView()', function (done) {
+        co(this.renderObj.renderView('./test/test.hbs',{title:'test',body:'koa-handlebars'})).then(function (html) {
+            if (!!html)done();
+            else done('renderView read empty')
+        });
     })
 
-    it('#readFile()', function () {
-        co(this.renderObj.readFile('./test/test.hbs')).then(function(file){
-            assert(!!file, 'file empty')
+    it('#readFile()', function (done) {
+        co(this.renderObj.getFile('./test/test.hbs')).then(function (html) {
+            if (!!html)done();
+            else done('file read empty')
         });
-
 
     });
 
