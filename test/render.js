@@ -2,7 +2,6 @@ const render = require('../lib/render');
 const assert = require('assert');
 const co = require('co');
 
-
 describe('render(opt)', function () {
 
     it('render is function', function () {
@@ -11,11 +10,10 @@ describe('render(opt)', function () {
 
 
     it('render(null) is render object', function () {
-        const renderObj = render(null);
+        let renderObj = render(null);
         assert(renderObj instanceof render);
     })
 });
-
 
 describe('renderObject function', function () {
 
@@ -24,7 +22,7 @@ describe('renderObject function', function () {
     });
 
     it('#renderView()', function (done) {
-        co(this.renderObj.renderView('./test/test.hbs',{title:'test',body:'koa-handlebars'})).then(function (html) {
+        co(this.renderObj.renderView('./test/test.hbs', {title: 'test', body: 'koa-handlebars'})).then(function (html) {
             if (!!html)done();
             else done('renderView read empty')
         });
@@ -36,6 +34,16 @@ describe('renderObject function', function () {
             else done('file read empty')
         });
 
+    });
+
+    it('#registerHelper()', function () {
+        assert.throws(this.renderObj.registerHelper, Error);
+    });
+
+    it('#registerHelper(name,fn)', function () {
+        assert.ok(this.renderObj.registerHelper('help',function () {
+
+        }));
     });
 
 })
