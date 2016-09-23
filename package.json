@@ -1,5 +1,5 @@
 {
-  "name": "koa-handlebars",
+  "name": "koa-handlebars-pdh",
   "version": "1.0.0",
   "description": "handlebars middle for koa2",
   "main": "index.js",
@@ -13,7 +13,8 @@
   "author": "jackiecookie",
   "license": "MIT",
   "dependencies": {
-    "handlebars": "^4.0.5"
+    "handlebars": "^4.0.5",
+    "thunkify": "^2.1.2"
   },
   "devDependencies": {
     "co": "^4.6.0",
@@ -24,7 +25,6 @@
     "make-lint": "^1.0.1",
     "mocha": "^3.0.2",
     "should": "^11.1.0",
-    "supertest": "^2.0.0",
-    "thunkify": "^2.1.2"
+    "supertest": "^2.0.0"
   }
 }
