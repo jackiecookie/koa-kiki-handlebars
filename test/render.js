@@ -22,7 +22,7 @@ describe('renderObject function', function () {
     });
 
     it('#renderView()', function (done) {
-        co(this.renderObj.renderView('./test/test.hbs', {title: 'test', body: 'koa-handlebars'})).then(function (html) {
+        co(this.renderObj.renderView('./test/test.hbs', {title: 'test', body: 'koa-kiki-handlebars'})).then(function (html) {
             if (!!html)done();
             else done('renderView read empty')
         });

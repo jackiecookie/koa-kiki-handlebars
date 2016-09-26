@@ -4,7 +4,7 @@ const request = require('supertest');
 const koa = require('koa');
 const router = require('koa-router')();
 
-describe('koa-handlebars', function () {
+describe('koa-kiki-handlebars', function () {
     before(function () {
         let app = new koa();
         app
