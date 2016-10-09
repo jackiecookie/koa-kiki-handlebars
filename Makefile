@@ -3,7 +3,7 @@ include node_modules/make-lint/index.mk
 
 REQUIRED = --require should
 
-TESTS=test/*
+TESTS=test/babel.js
 
 
 test:

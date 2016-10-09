@@ -13,8 +13,8 @@ describe('koa-kiki-handlebars', function () {
             .use(router.allowedMethods());
 
 
-        router.get('/', function *(next) {
-            yield this.render('./test/test.hbs');
+        router.get('/',async function (next) {
+            await this.render('./test/test.hbs');
         });
         this.app = app;
     });
