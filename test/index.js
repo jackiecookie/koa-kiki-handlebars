@@ -1,4 +1,4 @@
-const khbs = require('../index');
+const khbs = require('../lib/index');
 const assert = require('assert');
 const request = require('supertest');
 const koa = require('koa');
@@ -13,8 +13,8 @@ describe('koa-kiki-handlebars', function () {
             .use(router.allowedMethods());
 
 
-        router.get('/',async function (next) {
-            await this.render('./test/test.hbs');
+        router.get('/', async function (next) {
+            this.body =await this.render('./test/test.hbs');
         });
         this.app = app;
     });

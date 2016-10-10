@@ -1,10 +1,13 @@
 {
   "name": "koa-kiki-handlebars",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "handlebars middle for koa-kiki",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "compile": "echo \"compiling...\" && babel lib/ -d src/",
+    "lint": "eslint --reset src/",
+    "prepublish": "npm run compile && npm run test && npm run lint"
   },
   "keywords": [
     "koa",
@@ -14,12 +17,14 @@
   "author": "jackiecookie",
   "license": "MIT",
   "dependencies": {
-    "handlebars": "^4.0.5"
+    "handlebars": "^4.0.5",
+    "traits-decorator": "^1.0.1"
   },
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
     "babel-preset-stage-3": "^6.16.0",
     "babel-register": "^6.16.3",
     "co": "^4.6.0",
